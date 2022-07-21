@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css"; /* You can add global styles to this file, and also import other style files */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*.reset {*/
+/*  font-size: initial;*/
+/*  font-weight: initial;*/
+/*  border: black 1px;*/
+/*}*/

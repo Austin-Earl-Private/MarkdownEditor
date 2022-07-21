@@ -1,0 +1,18 @@
+
+<div class="flex ">
+  <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+    <li  *ngFor="let doc of documents"   class="py-2 px-4 w-full flex  justify-between flex-row rounded-t-lg border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100">
+      <span class="w-full h-full cursor-pointer" [routerLink]="['/editor',doc._id]">
+        <a class="w-full h-full" >{{doc.name}}</a>
+      </span>
+      <button class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-grey-600 bg-red-500 rounded dark:bg-blue-900 dark:text-blue-200" (click)="deleteDocument(doc)">X</button>
+    </li>
+<!--    <li  *ngFor="let doc of documents"  [routerLink]="['/editor',doc._id]" class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100">{{doc.name}}</li>-->
+
+  </ul>
+<!--  <a *ngFor="let doc of documents"  [routerLink]="['/editor',doc._id]" class="m-2 w-1/3  text-center p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">-->
+<!--    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{doc.name}}</h5>-->
+<!--    &lt;!&ndash;  <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>&ndash;&gt;-->
+<!--  </a>-->
+</div>
+

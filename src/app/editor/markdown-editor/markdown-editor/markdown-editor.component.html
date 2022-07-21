@@ -1,0 +1,42 @@
+<!--<code>test</code>-->
+<!--<textarea rows="20" class="w-full" style="background-image: linear-gradient(#F1F1F1 50%, #F9F9F9 50%); background-size: 100% 3rem" [textContent]="editorContent"></textarea>-->
+
+<!--  <ngs-code-editor-->
+<!--    theme="vs-dark"-->
+<!--    (valueChanged)="onchange($event)"-->
+<!--    [codeModel]="codeModel"-->
+<!--    [options]="options"-->
+<!--    class="h-full"-->
+
+
+<!--  >-->
+<!--  </ngs-code-editor>-->
+<div class="h-screen w-full flex flex-col">
+
+  <div class="flex flex-row content-start">
+    <button (click)="update()"
+      class="m-1 w-10 h-10 bg-red-600 rounded hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
+<!--      <svg viewBox="0 0 20 20"  class="w-6 h-6 inline-block">-->
+<!--        <path fill="#FFFFFF" d="M16,10c0,0.553-0.048,1-0.601,1H11v4.399C11,15.951,10.553,16,10,16c-0.553,0-1-0.049-1-0.601V11H4.601-->
+<!--                                    C4.049,11,4,10.553,4,10c0-0.553,0.049-1,0.601-1H9V4.601C9,4.048,9.447,4,10,4c0.553,0,1,0.048,1,0.601V9h4.399-->
+<!--                                    C15.952,9,16,9.447,16,10z" />-->
+<!--      </svg>-->
+      <svg xmlns="http://www.w3.org/2000/svg" class=" m-auto w-6 text-white content-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+      </svg>
+    </button>
+    <h2 class="text-white text-center my-auto  text-2xl ml-2.5">Document Name:</h2>
+    <input type="text" name="floating_name" id="floating_name" class=" ml-2.5 block py-2.5 px-0 text-sm font-bold text-white bg-gray-600 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" [value]="title" (keyup)="changeTitle($event)"/>
+<!--    <label for="floating_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">{{doc.name}}</label>-->
+  </div>
+
+  <ngx-monaco-editor style="height: 100%"  class="h-screen max-w-[1/2]" [options]="options" [(ngModel)]="code" (ngModelChange)="onchange()"></ngx-monaco-editor>
+
+</div>
+
+
+
+
+<!--  [(style.height)]=""-->
+
+<!--[dependencies]="dependencies"-->
